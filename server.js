@@ -119,10 +119,10 @@ app.post('/channels/:channel_name', function(req, res) {
               let output_file_name = file_name.split('.')[0];
 
               if(os.type().toString().match('Windows')) {
-                execSync('./bin/ffmpeg.exe -y -i "./public/channels/' + channel_name + '/' + file_name +'" -vn -ac 2 -ar 44100 -b:a 128k -c:a aac ' +
-                  './public/channels/' + channel_name + '/' + output_file_name + '.m4a');
-                execSync('./bin/ffmpeg.exe -y -i "./public/channels/' + channel_name + '/' + file_name +'" -vn -ac 2 -ar 44100 -b:a 128k -c:a libvorbis ' +
-                  './public/channels/' + channel_name + '/' + output_file_name + '.ogg');
+                execSync('.\\bin\\ffmpeg.exe -y -i .\\public\\channels\\' + channel_name + '\\' + file_name +' -vn -ac 2 -ar 44100 -b:a 128k -c:a aac ' +
+                  '.\\public/channels\\' + channel_name + '\\' + output_file_name + '.m4a');
+                execSync('.\\bin\\ffmpeg.exe -y -i .\\public\\channels\\' + channel_name + '\\' + file_name +' -vn -ac 2 -ar 44100 -b:a 128k -c:a libvorbis ' +
+                  '.\\public\\channels\\' + channel_name + '\\' + output_file_name + '.ogg');
               } else {
                 execSync('./bin/ffmpeg -y -i "./public/channels/' + channel_name + '/' + file_name +'" -vn -ac 2 -ar 44100 -b:a 128k -c:a aac ' +
                   './public/channels/' + channel_name + '/' + output_file_name + '.m4a');
