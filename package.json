@@ -1,0 +1,18 @@
+{
+  "name": "stm_server_example",
+  "version": "0.1.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "child_process": "^1.0.2",
+    "express": "^4.15.3",
+    "mkdirp": "^0.5.1",
+    "randomstring": "^1.1.5"
+  }
+}
